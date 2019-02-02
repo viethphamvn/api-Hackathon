@@ -66,8 +66,8 @@ public class direction {
         
         //Extract result
         for (int i = 0; i < step.length(); i++){
-            result_html = result_html + step.getJSONObject(i).getString("html_instructions") + "\n";
-            result_raw = result_raw + Jsoup.parse(step.getJSONObject(i).getString("html_instructions")).text() + "\n";
+            result_html = result_html + step.getJSONObject(i).getString("html_instructions") + " - Distance: " + step.getJSONObject(i).getJSONObject("distance").getString("text") + " Duration: " + step.getJSONObject(i).getJSONObject("duration").getString("text") + "\n";
+            result_raw = result_raw + Jsoup.parse(step.getJSONObject(i).getString("html_instructions")).text() + " - Distance: " + step.getJSONObject(i).getJSONObject("distance").getString("text") + " Duration: " + step.getJSONObject(i).getJSONObject("duration").getString("text") + "\n";
         }
     }
     

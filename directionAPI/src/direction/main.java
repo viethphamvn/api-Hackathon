@@ -25,7 +25,7 @@ public class main {
         
         direction obj = new direction(ori, des, mode);
         
-        System.out.println(obj.getRaw());
+        System.out.println(obj.getHtml());
     }
     
 }
